@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Panduan CBT USP 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+        
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #f8fafc;
+            /* Pola dasar tetap dipertahankan */
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 25px 25px;
+        }
+
+        .poster-card {
+            background: white;
+            border: 4px solid #1e1b4b;
+            box-shadow: 12px 12px 0px #1e1b4b;
+            transition: all 0.2s ease;
+        }
+
+        .poster-card:hover { 
+            transform: translateY(-4px);
+            box-shadow: 16px 16px 0px #1e1b4b;
+        }
+
+        /* Container untuk background pembeda tiap section */
+        .section-wrapper {
+            padding: 3rem 1.5rem;
+            border-radius: 3rem;
+            margin-bottom: 2rem;
+            border: 2px solid transparent;
+        }
+
+        .floating-icon {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .step-bubble {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .step-bubble:hover {
+            border-color: #6366f1;
+            transform: translateX(5px);
+        }
+
+        /* Kontainer ikon aplikasi */
+        .icon-box {
+            width: 140px;
+            height: 140px;
+            border-radius: 30px;
+            overflow: hidden;
+            border: 3px solid #f1f5f9;
+            flex-shrink: 0;
+        }
+
+        .app-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Android Zoom & Translate */
+        .android-zoom {
+            transform: scale(1.35) translateX(8%);
+        }
+
+        /* iOS Adjust */
+        .ios-up {
+            object-position: center 5%;
+        }
+
+        .badge-fun {
+            background: #fbbf24;
+            color: #1e1b4b;
+            font-weight: 900;
+            padding: 4px 16px;
+            border-radius: 99px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: inline-block;
+            border: 2px solid #1e1b4b;
+            box-shadow: 3px 3px 0px #1e1b4b;
+        }
+
+        /* Styling Logo Sekolah */
+        .school-logo-container {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 25px;
+            border: 4px solid #1e1b4b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 6px 6px 0px #fbbf24;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .poster-card { box-shadow: 6px 6px 0px #1e1b4b; border-width: 3px; }
+            .icon-box { width: 100px; height: 100px; margin-bottom: 1rem; }
+            .android-zoom { transform: scale(1.2); }
+            .school-logo-container { width: 80px; height: 80px; margin: 0 auto 1rem; }
+            .section-wrapper { padding: 2rem 1rem; border-radius: 2rem; }
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-10">
+    <div class="max-w-4xl mx-auto space-y-8 text-slate-800">
+        
+        <!-- Header Poster -->
+        <header class="bg-indigo-600 rounded-[2rem] p-8 md:p-12 text-white relative overflow-hidden border-4 border-indigo-900 shadow-[8px_8px_0px_#1e1b4b] mb-12">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <i class="fas fa-rocket absolute -top-4 -left-4 text-[10rem] rotate-12 text-white"></i>
+                <i class="fas fa-gamepad absolute -bottom-4 -right-4 text-[10rem] -rotate-12 text-white"></i>
+            </div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-10">
+                <!-- LOGO DI SEBELAH KIRI -->
+                <div class="school-logo-container">
+                    <img src="https://image2url.com/r2/default/images/1774449709726-4374bfeb-e350-4bc6-b05e-32bfcc5d22e4.png" 
+                         alt="[Logo SMP Muhammadiyah 2 Surabaya]" 
+                         class="w-full h-full object-contain p-2">
+                </div>
+
+                <!-- TEKS DI SEBELAH KANAN -->
+                <div class="text-center md:text-left flex-1">
+                    <span class="bg-yellow-400 text-indigo-900 px-4 py-1 rounded-full font-black text-[10px] md:text-xs tracking-widest uppercase mb-2 inline-block shadow-sm">SPEMDA DIGITAL</span>
+                    <h1 class="text-3xl md:text-5xl font-black mb-1 italic tracking-tight uppercase leading-tight text-white">Ready for CBT?</h1>
+                    <p class="text-indigo-100 font-bold text-sm md:text-lg opacity-90 uppercase tracking-widest mb-4">SMP Muhammadiyah 2 Surabaya</p>
+                    
+                    <!-- Tagline Interaktif -->
+                    <div class="bg-white/10 backdrop-blur-sm border-2 border-white/20 inline-block px-4 py-2 rounded-xl shadow-lg">
+                        <p class="text-white font-black text-sm md:text-lg uppercase tracking-tight">
+                            🚀 3 Langkah Mudah, Kamu Siap Ujian!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- LANGKAH 1: SIAPKAN PERANGKAT (Background Hijau Mint) -->
+        <div class="section-wrapper bg-emerald-50/80 border-emerald-100 shadow-inner">
+            <section class="space-y-6">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-emerald-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-black text-2xl shadow-lg border-2 border-indigo-900">1</div>
+                    <h2 class="text-2xl md:text-4xl font-black text-emerald-900 uppercase italic">Siapkan Perangkatmu!</h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <!-- Android App -->
+                    <div class="poster-card p-6 md:p-8 rounded-[2rem] flex flex-col md:flex-row items-center border-green-200">
+                        <div class="icon-box md:mr-8 shadow-green-100">
+                            <img src="https://www.image2url.com/r2/default/images/1776582606959-f7c20719-39f7-49df-8cbc-1dcf616ca56f.jpg" 
+                                 class="app-img android-zoom" alt="[Aplikasi CBT EXAM Android]">
+                        </div>
+                        <div class="text-center md:text-left flex-1">
+                            <div class="flex items-center justify-center md:justify-start space-x-2 mb-2">
+                                <i class="fab fa-android text-green-500 text-xl"></i>
+                                <span class="font-black text-xs uppercase text-green-600 tracking-tighter">Aplikasi Ujian Android</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-black text-slate-800 mb-2 uppercase tracking-tighter italic leading-none">CBT EXAM</h3>
+                            <p class="text-slate-500 font-medium">Instal aplikasi resmi melalui <span class="text-green-600 font-bold">Google Play Store</span>.</p>
+                        </div>
+                    </div>
+
+                    <!-- iOS App -->
+                    <div class="poster-card p-6 md:p-8 rounded-[2rem] flex flex-col md:flex-row items-center border-slate-300">
+                        <div class="icon-box md:mr-8 shadow-slate-100">
+                            <img src="https://www.image2url.com/r2/default/images/1776582713644-0a3054b3-2c7d-4052-8b94-bba48cfd72d1.jpg" 
+                                 class="app-img ios-up" alt="[Aplikasi Exambrowser iOS]">
+                        </div>
+                        <div class="text-center md:text-left flex-1">
+                            <div class="flex items-center justify-center md:justify-start space-x-2 mb-2">
+                                <i class="fab fa-apple text-slate-800 text-xl"></i>
+                                <span class="font-black text-xs uppercase text-slate-500 tracking-tighter">Aplikasi Ujian iOS (iPhone)</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-black text-slate-800 mb-2 uppercase tracking-tighter italic leading-none">Exambrowser</h3>
+                            <p class="text-slate-500 font-medium">Instal aplikasi resmi melalui <span class="text-slate-900 font-bold text-slate-900">App Store</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- LANGKAH 2: AMBIL BERKAS UJIAN (Background Kuning Amber) -->
+        <div class="section-wrapper bg-amber-50/80 border-amber-100 shadow-inner">
+            <section class="space-y-6">
+                <div class="flex items-center space-x-4 text-indigo-900">
+                    <div class="bg-amber-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-black text-2xl shadow-lg border-2 border-indigo-900">2</div>
+                    <h2 class="text-2xl md:text-4xl font-black uppercase italic text-amber-900">Ambil Berkas Ujian!</h2>
+                </div>
+
+                <div class="poster-card bg-amber-400 p-8 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between border-amber-600 text-indigo-900">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-indigo-900 font-black text-xl md:text-2xl mb-4 uppercase leading-none">Link Download Soal:</h4>
+                        <div class="bg-white px-6 py-4 rounded-2xl border-2 border-indigo-900 inline-block shadow-[4px_4px_0px_#1e1b4b]">
+                            <code class="text-indigo-600 font-black text-xl md:text-3xl tracking-tighter">bit.ly/CBTEXAM26</code>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <i class="fas fa-cloud-download-alt text-7xl animate-bounce"></i>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Alur Android -->
+                    <div class="poster-card p-8 rounded-[2.5rem] bg-white/80 border-emerald-200">
+                        <div class="flex items-center space-x-3 mb-6">
+                            <i class="fab fa-android text-3xl text-emerald-600"></i>
+                            <h4 class="font-black text-xl text-emerald-900 uppercase italic">Alur Android</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 text-slate-800">
+                                <span class="font-black text-emerald-500 text-lg italic">01.</span>
+                                <p class="text-sm font-bold leading-tight">Buka Folder bernama <span class="text-emerald-600 font-black">"CBT SAT SPEMDA"</span></p>
+                            </div>
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 text-slate-800">
+                                <span class="font-black text-emerald-500 text-lg italic">02.</span>
+                                <p class="text-sm font-bold leading-tight">Download semua file soal mapel ujian</p>
+                            </div>
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 text-slate-800">
+                                <span class="font-black text-emerald-500 text-lg italic">03.</span>
+                                <p class="text-sm font-bold leading-tight">Pastikan file sudah terdownload di HP</p>
+                            </div>
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 bg-emerald-100/50 border-emerald-300">
+                                <span class="font-black text-emerald-500 text-lg italic">04.</span>
+                                <p class="text-sm font-black text-emerald-800 leading-tight italic underline">Cek file di File Manager HP.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alur iOS -->
+                    <div class="poster-card p-8 rounded-[2.5rem] bg-white/80 border-indigo-200">
+                        <div class="flex items-center space-x-3 mb-6 text-indigo-900">
+                            <i class="fab fa-apple text-3xl text-indigo-600"></i>
+                            <h4 class="font-black text-xl text-indigo-900 uppercase italic">Alur iOS</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 text-slate-800">
+                                <span class="font-black text-indigo-500 text-lg italic text-indigo-600">01.</span>
+                                <p class="text-sm font-bold leading-tight">Buka Folder bernama <span class="text-indigo-600 font-black">"CBT SAT SPEMDA"</span></p>
+                            </div>
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 text-slate-800">
+                                <span class="font-black text-indigo-500 text-lg italic text-indigo-600">02.</span>
+                                <p class="text-sm font-bold leading-tight">Simpan file dari drive ke aplikasi <span class="font-black text-indigo-600 underline">"Files"</span></p>
+                            </div>
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 text-slate-800">
+                                <span class="font-black text-indigo-500 text-lg italic text-indigo-600">03.</span>
+                                <p class="text-sm font-bold leading-tight">Pastikan file sudah terdownload di HP</p>
+                            </div>
+                            <div class="step-bubble p-4 rounded-2xl flex items-start space-x-4 bg-indigo-100/50 border-indigo-300">
+                                <span class="font-black text-indigo-500 text-lg italic text-indigo-600">04.</span>
+                                <p class="text-sm font-black text-indigo-800 leading-tight italic underline">Cek file di File Manager HP.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- LANGKAH 3: MEMULAI CBT (Background Biru Indigo Muda) -->
+        <div class="section-wrapper bg-indigo-50/80 border-indigo-100 shadow-inner">
+            <section class="space-y-6">
+                <div class="flex items-center space-x-4 text-indigo-900">
+                    <div class="bg-indigo-700 text-white w-12 h-12 rounded-full flex items-center justify-center font-black text-2xl shadow-lg border-2 border-indigo-900">3</div>
+                    <h2 class="text-2xl md:text-4xl font-black uppercase italic text-indigo-800">Memulai CBT!</h2>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <!-- WiFi Connection -->
+                    <div class="poster-card p-6 md:p-10 rounded-[2.5rem] flex flex-col md:flex-row items-center border-indigo-900 bg-white">
+                        <div class="bg-blue-600 w-24 h-24 md:w-32 md:h-32 rounded-[2rem] flex items-center justify-center text-white mb-6 md:mb-0 md:mr-10 floating-icon shadow-[6px_6px_0px_#1e1b4b] border-4 border-indigo-900 shrink-0">
+                            <i class="fas fa-wifi text-4xl md:text-5xl text-white"></i>
+                        </div>
+                        <div class="text-center md:text-left flex-1">
+                            <div class="badge-fun mb-3">Final Step</div>
+                            <h3 class="text-xl md:text-3xl font-black text-indigo-950 mb-2 tracking-tighter uppercase italic leading-tight">Masuk ke Wi-Fi "UJIAN"</h3>
+                            <p class="text-slate-700 font-bold text-sm md:text-lg leading-relaxed md:pr-4">
+                                Sebelum ujian dimulai, peserta <span class="text-indigo-600 font-black italic">wajib</span> masuk ke Wi-Fi bernama <span class="bg-indigo-100 px-2 rounded font-black text-indigo-700">UJIAN</span> dan <span class="text-red-600 font-black underline decoration-4 decoration-red-200 uppercase tracking-tight">data seluler wajib dimatikan</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cara Membuka Soal -->
+                    <div class="poster-card p-8 md:p-10 rounded-[2.5rem] bg-indigo-900 text-white border-indigo-950 shadow-[12px_12px_0px_#fbbf24]">
+                        <div class="flex items-center mb-6 text-white">
+                            <i class="fas fa-play-circle text-yellow-400 text-4xl mr-4"></i>
+                            <h4 class="font-black text-2xl md:text-3xl uppercase italic tracking-tighter text-white text-white text-white">Cara Membuka Soal:</h4>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base font-semibold">
+                            <div class="bg-indigo-800/80 p-5 md:p-6 rounded-2xl border-2 border-indigo-700 hover:bg-indigo-800 transition-colors">
+                                <span class="text-green-400 font-black text-lg block mb-2 uppercase tracking-widest text-green-400">ANDROID:</span>
+                                <p class="text-indigo-100 leading-snug text-sm md:text-base">Cari file <span class="text-yellow-400 font-bold text-yellow-400">.Cbt</span> di File Manager, ketuk & buka dengan aplikasi <span class="bg-green-900/50 px-1 rounded font-bold italic underline underline-offset-4 text-white">CBT EXAM</span>.</p>
+                            </div>
+                            <div class="bg-indigo-800/80 p-5 md:p-6 rounded-2xl border-2 border-indigo-700 hover:bg-indigo-800 transition-colors">
+                                <span class="text-sky-400 font-black text-lg block mb-2 uppercase tracking-widest text-sky-400">IOS (iPhone):</span>
+                                <p class="text-indigo-100 leading-snug text-sm md:text-base">Buka aplikasi <span class="text-yellow-400 font-bold italic underline text-yellow-400 text-yellow-400 text-yellow-400">Files</span>, ketuk file <span class="text-yellow-400 font-bold text-yellow-400">.Cbt</span>, pilih <span class="italic underline text-yellow-400">Share</span> & buka dengan <span class="bg-sky-900/50 px-1 rounded font-bold italic underline underline-offset-4 text-white text-white text-white">Exambrowser</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer Poster -->
+        <footer class="text-center py-10 space-y-6">
+            <div class="bg-indigo-900 text-white inline-block px-12 py-5 rounded-[2rem] border-4 border-white shadow-[8px_8px_0px_#fbbf24] transform hover:rotate-1 transition-transform cursor-default">
+                <p class="text-3xl md:text-5xl font-black italic uppercase tracking-tighter text-white text-white text-white">JUJUR ITU JUARA! 🏆</p>
+            </div>
+            <div class="text-slate-500 font-black text-[10px] md:text-sm tracking-[0.2em] uppercase">
+                <p>&copy; 2026 TIM IT SPEMDA SURABAYA</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
